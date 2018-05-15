@@ -1,0 +1,10 @@
+[landy@ip-172-31-49-185 ~]$ hdfs dfs -ls /user/landy/sqoop
+Found 2 items
+-rw-r--r--   3 landy hadoop          0 2018-05-14 21:17 /user/landy/sqoop/_SUCCESS
+-rw-r--r--   3 landy hadoop         49 2018-05-14 21:17 /user/landy/sqoop/part-m-00000
+
+
+
+[landy@ip-172-31-49-185 ~]$ hdfs dfs -cat /user/landy/sqoop/part-m-00000
+5.14.3|ip-172-31-51-70.ec2.internal/172.31.51.70
+
