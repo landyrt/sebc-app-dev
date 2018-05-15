@@ -1,0 +1,115 @@
+[landy@ip-172-31-49-185 flume]$ hdfs dfs -ls -R /user/landy/input/
+drwxrwxr-x   - landy hadoop          0 2018-05-15 02:03 /user/landy/input/201805150159
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 01:59 /user/landy/input/201805150159/AppXYZ.1526349541314.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 01:59 /user/landy/input/201805150159/AppXYZ.1526349541315.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 01:59 /user/landy/input/201805150159/AppXYZ.1526349541316.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 01:59 /user/landy/input/201805150159/AppXYZ.1526349541317.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 01:59 /user/landy/input/201805150159/AppXYZ.1526349541318.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 01:59 /user/landy/input/201805150159/AppXYZ.1526349541319.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 01:59 /user/landy/input/201805150159/AppXYZ.1526349541320.txt
+-rw-r--r--   3 landy hadoop        760 2018-05-15 02:03 /user/landy/input/201805150159/AppXYZ.1526349541321.txt
+drwxrwxr-x   - landy hadoop          0 2018-05-15 02:03 /user/landy/input/201805150200
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:00 /user/landy/input/201805150200/AppXYZ.1526349600373.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:00 /user/landy/input/201805150200/AppXYZ.1526349600374.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:00 /user/landy/input/201805150200/AppXYZ.1526349600375.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:00 /user/landy/input/201805150200/AppXYZ.1526349600376.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:00 /user/landy/input/201805150200/AppXYZ.1526349600377.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:00 /user/landy/input/201805150200/AppXYZ.1526349600378.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:00 /user/landy/input/201805150200/AppXYZ.1526349600379.txt
+-rw-r--r--   3 landy hadoop        760 2018-05-15 02:03 /user/landy/input/201805150200/AppXYZ.1526349600380.txt
+drwxrwxr-x   - landy hadoop          0 2018-05-15 02:03 /user/landy/input/201805150201
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:01 /user/landy/input/201805150201/AppXYZ.1526349660379.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:01 /user/landy/input/201805150201/AppXYZ.1526349660380.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:01 /user/landy/input/201805150201/AppXYZ.1526349660381.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:01 /user/landy/input/201805150201/AppXYZ.1526349660382.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:01 /user/landy/input/201805150201/AppXYZ.1526349660383.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:01 /user/landy/input/201805150201/AppXYZ.1526349660384.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:01 /user/landy/input/201805150201/AppXYZ.1526349660385.txt
+-rw-r--r--   3 landy hadoop        570 2018-05-15 02:03 /user/landy/input/201805150201/AppXYZ.1526349660386.txt
+drwxrwxr-x   - landy hadoop          0 2018-05-15 02:03 /user/landy/input/201805150202
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:02 /user/landy/input/201805150202/AppXYZ.1526349720386.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:02 /user/landy/input/201805150202/AppXYZ.1526349720387.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:02 /user/landy/input/201805150202/AppXYZ.1526349720388.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:02 /user/landy/input/201805150202/AppXYZ.1526349720389.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:02 /user/landy/input/201805150202/AppXYZ.1526349720390.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:02 /user/landy/input/201805150202/AppXYZ.1526349720391.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:02 /user/landy/input/201805150202/AppXYZ.1526349720392.txt
+-rw-r--r--   3 landy hadoop        760 2018-05-15 02:03 /user/landy/input/201805150202/AppXYZ.1526349720393.txt
+drwxrwxr-x   - landy hadoop          0 2018-05-15 02:03 /user/landy/input/201805150203
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:03 /user/landy/input/201805150203/AppXYZ.1526349780392.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:03 /user/landy/input/201805150203/AppXYZ.1526349780393.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 02:03 /user/landy/input/201805150203/AppXYZ.1526349780394.txt
+-rw-r--r--   3 landy hadoop        760 2018-05-15 02:03 /user/landy/input/201805150203/AppXYZ.1526349780395.txt
+drwxrwxr-x   - landy hadoop          0 2018-05-15 17:36 /user/landy/input/201805151733
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:33 /user/landy/input/201805151733/AppXYZ.1526405613978.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:33 /user/landy/input/201805151733/AppXYZ.1526405613979.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:33 /user/landy/input/201805151733/AppXYZ.1526405613980.txt
+-rw-r--r--   3 landy hadoop        570 2018-05-15 17:36 /user/landy/input/201805151733/AppXYZ.1526405613981.txt
+drwxrwxr-x   - landy hadoop          0 2018-05-15 17:36 /user/landy/input/201805151734
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:34 /user/landy/input/201805151734/AppXYZ.1526405640047.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:34 /user/landy/input/201805151734/AppXYZ.1526405640048.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:34 /user/landy/input/201805151734/AppXYZ.1526405640049.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:34 /user/landy/input/201805151734/AppXYZ.1526405640050.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:34 /user/landy/input/201805151734/AppXYZ.1526405640051.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:34 /user/landy/input/201805151734/AppXYZ.1526405640052.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:34 /user/landy/input/201805151734/AppXYZ.1526405640053.txt
+-rw-r--r--   3 landy hadoop        760 2018-05-15 17:36 /user/landy/input/201805151734/AppXYZ.1526405640054.txt
+drwxrwxr-x   - landy hadoop          0 2018-05-15 17:36 /user/landy/input/201805151735
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:35 /user/landy/input/201805151735/AppXYZ.1526405700055.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:35 /user/landy/input/201805151735/AppXYZ.1526405700056.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:35 /user/landy/input/201805151735/AppXYZ.1526405700057.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:35 /user/landy/input/201805151735/AppXYZ.1526405700058.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:35 /user/landy/input/201805151735/AppXYZ.1526405700059.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:35 /user/landy/input/201805151735/AppXYZ.1526405700060.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:35 /user/landy/input/201805151735/AppXYZ.1526405700061.txt
+-rw-r--r--   3 landy hadoop        760 2018-05-15 17:36 /user/landy/input/201805151735/AppXYZ.1526405700062.txt
+drwxrwxr-x   - landy hadoop          0 2018-05-15 17:36 /user/landy/input/201805151736
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:36 /user/landy/input/201805151736/AppXYZ.1526405760062.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:36 /user/landy/input/201805151736/AppXYZ.1526405760063.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:36 /user/landy/input/201805151736/AppXYZ.1526405760064.txt
+-rw-r--r--   3 landy hadoop       1520 2018-05-15 17:36 /user/landy/input/201805151736/AppXYZ.1526405760065.txt
+
+[landy@ip-172-31-49-185 flume]$ hdfs dfs -cat /user/landy/input/201805151736/AppXYZ.1526405760062.txt
+this is a test it does not work hello
+hello world goodbye world hello again
+this is a test it does not work hello
+hello world goodbye world hello again
+this is a test it does not work hello
+hello world goodbye world hello again
+this is a test it does not work hello
+hello world goodbye world hello again
+this is a test it does not work hello
+hello world goodbye world hello again
+this is a test it does not work hello
+hello world goodbye world hello again
+this is a test it does not work hello
+hello world goodbye world hello again
+this is a test it does not work hello
+hello world goodbye world hello again
+this is a test it does not work hello
+hello world goodbye world hello again
+this is a test it does not work hello
+hello world goodbye world hello again
+this is a test it does not work hello
+hello world goodbye world hello again
+hello world goodbye world hello again
+hello world goodbye world hello again
+hello world goodbye world hello again
+this is a test it does not work hello
+hello world goodbye world hello again
+this is a test it does not work hello
+hello world goodbye world hello again
+this is a test it does not work hello
+hello world goodbye world hello again
+this is a test it does not work hello
+this is a test it does not work hello
+hello world goodbye world hello again
+this is a test it does not work hello
+hello world goodbye world hello again
+this is a test it does not work hello
+hello world goodbye world hello again
+this is a test it does not work hello
+this is a test it does not work hello
+
+
+
