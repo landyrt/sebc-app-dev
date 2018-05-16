@@ -5,6 +5,10 @@ import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.fs.{FileSystem, Path}
 import org.apache.spark.rdd.RDD
 import org.apache.log4j.{Level, Logger}
+import org.apache.spark.streaming.flume._
+import org.apache.spark.streaming.{StreamingContext, Seconds}
+import org.apache.spark.sql.SparkSession
+
 
 object SparkStreamExample {
     lazy val logger = Logger.getLogger(this.getClass.getName)
@@ -35,10 +39,21 @@ object SparkStreamExample {
 
         Logger.getRootLogger.setLevel(Level.WARN)
 
-        val ssc = new StreamingContext(conf, Seconds(5))
+        val ssc = new StreamingContext(sc, Seconds(5))
 
         /* READ STREAM FROM FLUME AND PRINT COUNTS */
-        counts.print()
+        
+      val flumeStream = FlumeUtils.createStream(ssc,host,port)
+      val lines = flumeStream.map {record => {(new String(record.event.getBody().array()))}}
+      val words = lines.flatMap(line => line.split(" "))
+      val counts = words.map(word => (word, 1)).reduceByKey(_+_)
+  
+
+        
+      counts.print()
+      // Start Spark Streaming Session
+        ssc.start
+        ssc.awaitTermination()
 
         /* DON'T FORGET TO START THE STREAM SESSION */
     }
