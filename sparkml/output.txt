@@ -1,0 +1,123 @@
+
+predicted_house_price = 17577.741766290972 + -32550.722949013416 x num_of_rooms + 21672.05636780608 x num_of_baths + 125.05021707181838 x size_of_house + 54540.6343325116 x one_if_pool_zero_otherwise
+
+
+
+[landy@ip-172-31-49-185 sparkml]$ ./run.sh 
+18/05/16 17:55:25 INFO spark.SparkContext: Running Spark version 2.3.0.cloudera2
+18/05/16 17:55:25 INFO spark.SparkContext: Submitted application: Spark ML Example
+18/05/16 17:55:25 INFO spark.SecurityManager: Changing view acls to: landy
+18/05/16 17:55:25 INFO spark.SecurityManager: Changing modify acls to: landy
+18/05/16 17:55:25 INFO spark.SecurityManager: Changing view acls groups to: 
+18/05/16 17:55:25 INFO spark.SecurityManager: Changing modify acls groups to: 
+18/05/16 17:55:25 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(landy); groups with view permissions: Set(); users  with modify permissions: Set(landy); groups with modify permissions: Set()
+18/05/16 17:55:25 INFO util.Utils: Successfully started service 'sparkDriver' on port 38467.
+18/05/16 17:55:25 INFO spark.SparkEnv: Registering MapOutputTracker
+18/05/16 17:55:25 INFO spark.SparkEnv: Registering BlockManagerMaster
+18/05/16 17:55:25 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+18/05/16 17:55:25 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+18/05/16 17:55:25 INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-52dec04c-82d4-4129-9391-fd0dfcc64c1e
+18/05/16 17:55:25 INFO memory.MemoryStore: MemoryStore started with capacity 366.3 MB
+18/05/16 17:55:25 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+18/05/16 17:55:25 INFO util.log: Logging initialized @1914ms
+18/05/16 17:55:25 INFO server.Server: jetty-9.3.z-SNAPSHOT
+18/05/16 17:55:25 INFO server.Server: Started @1992ms
+18/05/16 17:55:25 INFO server.AbstractConnector: Started ServerConnector@3f2049b6{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+18/05/16 17:55:25 INFO util.Utils: Successfully started service 'SparkUI' on port 4040.
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@619bd14c{/jobs,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2c282004{/jobs/json,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7bfc3126{/jobs/job,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@26f143ed{/jobs/job/json,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4b770e40{/stages,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@54a3ab8f{/stages/json,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6a1ebcff{/stages/stage,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@13c612bd{/stages/stage/json,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6b739528{/stages/pool,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@41de5768{/stages/pool/json,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@28fa700e{/storage,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@e041f0c{/storage/json,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@11963225{/storage/rdd,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@11ee02f8{/storage/rdd/json,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@61a5b4ae{/environment,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5b69fd74{/environment/json,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@437e951d{/executors,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@63a5e46c{/executors/json,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@49ef32e0{/executors/threadDump,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6bd51ed8{/executors/threadDump/json,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@51abf713{/static,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@64b31700{/,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@bae47a0{/api,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@214894fc{/jobs/job/kill,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@e362c57{/stages/stage/kill,null,AVAILABLE,@Spark}
+18/05/16 17:55:25 INFO ui.SparkUI: Bound SparkUI to 0.0.0.0, and started at http://ip-172-31-49-185.ec2.internal:4040
+18/05/16 17:55:25 INFO spark.SparkContext: Added JAR file:/home/landy/sparkml/sparkmlexample_2.11-1.0.jar at spark://ip-172-31-49-185.ec2.internal:38467/jars/sparkmlexample_2.11-1.0.jar with timestamp 1526493325892
+18/05/16 17:55:25 INFO util.Utils: Using initial executors = 2, max of spark.dynamicAllocation.initialExecutors, spark.dynamicAllocation.minExecutors and spark.executor.instances
+18/05/16 17:55:26 INFO client.RMProxy: Connecting to ResourceManager at ip-172-31-59-75.ec2.internal/172.31.59.75:8032
+18/05/16 17:55:26 INFO yarn.Client: Requesting a new application from cluster with 4 NodeManagers
+18/05/16 17:55:26 INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (13737 MB per container)
+18/05/16 17:55:26 INFO yarn.Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+18/05/16 17:55:26 INFO yarn.Client: Setting up container launch context for our AM
+18/05/16 17:55:26 INFO yarn.Client: Setting up the launch environment for our AM container
+18/05/16 17:55:26 INFO yarn.Client: Preparing resources for our AM container
+18/05/16 17:55:27 INFO yarn.Client: Uploading resource file:/tmp/spark-e80885e9-d1b5-4f86-8cb5-82c86f149a54/__spark_conf__4220859592112383584.zip -> hdfs://ip-172-31-59-75.ec2.internal:8020/user/landy/.sparkStaging/application_1526054256222_1884/__spark_conf__.zip
+18/05/16 17:55:27 INFO spark.SecurityManager: Changing view acls to: landy
+18/05/16 17:55:27 INFO spark.SecurityManager: Changing modify acls to: landy
+18/05/16 17:55:27 INFO spark.SecurityManager: Changing view acls groups to: 
+18/05/16 17:55:27 INFO spark.SecurityManager: Changing modify acls groups to: 
+18/05/16 17:55:27 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(landy); groups with view permissions: Set(); users  with modify permissions: Set(landy); groups with modify permissions: Set()
+18/05/16 17:55:28 INFO yarn.Client: Submitting application application_1526054256222_1884 to ResourceManager
+18/05/16 17:55:28 INFO impl.YarnClientImpl: Submitted application application_1526054256222_1884
+18/05/16 17:55:28 INFO cluster.SchedulerExtensionServices: Starting Yarn extension services with app application_1526054256222_1884 and attemptId None
+18/05/16 17:55:29 INFO yarn.Client: Application report for application_1526054256222_1884 (state: ACCEPTED)
+18/05/16 17:55:29 INFO yarn.Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: root.users.landy
+	 start time: 1526493328392
+	 final status: UNDEFINED
+	 tracking URL: http://ip-172-31-59-75.ec2.internal:8088/proxy/application_1526054256222_1884/
+	 user: landy
+18/05/16 17:55:30 INFO yarn.Client: Application report for application_1526054256222_1884 (state: ACCEPTED)
+18/05/16 17:55:31 INFO yarn.Client: Application report for application_1526054256222_1884 (state: ACCEPTED)
+18/05/16 17:55:31 INFO cluster.YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> ip-172-31-59-75.ec2.internal, PROXY_URI_BASES -> http://ip-172-31-59-75.ec2.internal:8088/proxy/application_1526054256222_1884), /proxy/application_1526054256222_1884
+18/05/16 17:55:31 INFO ui.JettyUtils: Adding filter: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+18/05/16 17:55:31 INFO cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+18/05/16 17:55:32 INFO yarn.Client: Application report for application_1526054256222_1884 (state: RUNNING)
+18/05/16 17:55:32 INFO yarn.Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: 172.31.51.85
+	 ApplicationMaster RPC port: 0
+	 queue: root.users.landy
+	 start time: 1526493328392
+	 final status: UNDEFINED
+	 tracking URL: http://ip-172-31-59-75.ec2.internal:8088/proxy/application_1526054256222_1884/
+	 user: landy
+18/05/16 17:55:32 INFO cluster.YarnClientSchedulerBackend: Application application_1526054256222_1884 has started running.
+18/05/16 17:55:32 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45838.
+18/05/16 17:55:32 INFO netty.NettyBlockTransferService: Server created on ip-172-31-49-185.ec2.internal:45838
+18/05/16 17:55:32 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+18/05/16 17:55:32 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, ip-172-31-49-185.ec2.internal, 45838, None)
+18/05/16 17:55:32 INFO storage.BlockManagerMasterEndpoint: Registering block manager ip-172-31-49-185.ec2.internal:45838 with 366.3 MB RAM, BlockManagerId(driver, ip-172-31-49-185.ec2.internal, 45838, None)
+18/05/16 17:55:32 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, ip-172-31-49-185.ec2.internal, 45838, None)
+18/05/16 17:55:32 INFO storage.BlockManager: external shuffle service port = 7337
+18/05/16 17:55:32 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, ip-172-31-49-185.ec2.internal, 45838, None)
+18/05/16 17:55:32 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@12abcd1e{/metrics/json,null,AVAILABLE,@Spark}
+18/05/16 17:55:32 INFO scheduler.EventLoggingListener: Logging events to hdfs://ip-172-31-59-75.ec2.internal:8020/user/spark/spark2ApplicationHistory/application_1526054256222_1884
+18/05/16 17:55:32 INFO util.Utils: Using initial executors = 2, max of spark.dynamicAllocation.initialExecutors, spark.dynamicAllocation.minExecutors and spark.executor.instances
+18/05/16 17:55:32 INFO spark.SparkContext: Registered listener com.cloudera.spark.lineage.NavigatorAppListener
+18/05/16 17:55:35 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.31.49.185:49710) with ID 2
+18/05/16 17:55:35 INFO spark.ExecutorAllocationManager: New executor 2 has registered (new total is 1)
+18/05/16 17:55:35 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.31.49.185:49712) with ID 1
+18/05/16 17:55:35 INFO spark.ExecutorAllocationManager: New executor 1 has registered (new total is 2)
+18/05/16 17:55:35 INFO storage.BlockManagerMasterEndpoint: Registering block manager ip-172-31-49-185.ec2.internal:35356 with 371.1 MB RAM, BlockManagerId(2, ip-172-31-49-185.ec2.internal, 35356, None)
+18/05/16 17:55:35 INFO cluster.YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+18/05/16 17:55:35 WARN spark.SparkContext: Using an existing SparkContext; some configuration may not take effect.
+18/05/16 17:55:35 INFO storage.BlockManagerMasterEndpoint: Registering block manager ip-172-31-49-185.ec2.internal:43324 with 371.1 MB RAM, BlockManagerId(1, ip-172-31-49-185.ec2.internal, 43324, None)
+18/05/16 17:55:35 WARN libsvm.LibSVMFileFormat: 'numFeatures' option not specified, determining the number of features by going though the input. If you know the number in advance, please specify it via 'numFeatures' option to avoid the extra scan.
+18/05/16 17:55:43 WARN netlib.BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+18/05/16 17:55:43 WARN netlib.BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+Coefficients: [-32550.722949013416,21672.05636780608,125.05021707181838,54540.6343325116] Intercept: 17577.741766290972
+predicted_house_price = 17577.741766290972 + -32550.722949013416 x num_of_rooms + 21672.05636780608 x num_of_baths + 125.05021707181838 x size_of_house + 54540.6343325116 x one_if_pool_zero_otherwise
