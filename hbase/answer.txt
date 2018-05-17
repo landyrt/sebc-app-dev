@@ -1,0 +1,30 @@
+
+HBASE
+
+Para responder a las preguntas, definimos una llave compuesta tomando en cuenta:
+- Los campos que se involucran en las preguntas que debemos responder
+- utilizar los valores para especificar las llaves del conjunto de datos que queremos consultar (GET)
+- Asegurar que la distribución en las regiones esta balanceada (usando un módulo de 4 dígitos al inicio) (PUT)
+- Tener llaves únicas, agregando un número random y usando hash de dos campos
+
+La estructura de la llave:
+
+RowID
+- Module (4 dígitos)
+- Timestamp
+- Email
+- Separador (1 caracter)
+- Domain (sin www.)
+- Hash (IP+Email)
+- Random number
+
+Los campos en column family:
+
+Column Family
+- Domain
+- Email
+- IP
+- Timestamp
+
+
+
