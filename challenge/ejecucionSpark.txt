@@ -1,0 +1,58 @@
+Ejecución Spark:
+
+export HBASE_LIB="/opt/cloudera/parcels/CDH-5.14.2-1.cdh5.14.2.p0.3/lib/hbase"
+export HTRACE_LIB="/opt/cloudera/parcels/CDH-5.14.2-1.cdh5.14.2.p0.3/jars"
+export HIVE_LIB="/opt/cloudera/parcels/CDH-5.14.2-1.cdh5.14.2.p0.3/lib/hive/lib/"
+spark2-submit --deploy-mode client --master yarn --conf "spark.driver.extraClassPath=${HBASE_LIB}/hbase-common-1.2.0-cdh5.14.2.jar:${HBASE_LIB}/hbase-client-1.2.0-cdh5.14.2.jar:${HBASE_LIB}/hbase-server-1.2.0-cdh5.14.2.jar:${HBASE_LIB}/hbase-spark-1.2.0-cdh5.14.2.jar:${HBASE_LIB}/hbase-protocol-1.2.0-cdh5.14.2.jar:${HTRACE_LIB}/htrace-core-3.2.0-incubating.jar:${HTRACE_LIB}/*.jar" --conf "spark.executor.extraClassPath=${HBASE_LIB}/hbase-common-1.2.0-cdh5.14.2.jar:${HBASE_LIB}/hbase-client-1.2.0-cdh5.14.2.jar:${HBASE_LIB}/hbase-server-1.2.0-cdh5.14.2.jar:${HBASE_LIB}/hbase-spark-1.2.0-cdh5.14.2.jar:${HBASE_LIB}/hbase-protocol-1.2.0-cdh5.14.2.jar:${HTRACE_LIB}/htrace-core-3.2.0-incubating.jar:${HTRACE_LIB}/*.jar" --executor-memory 1G --num-executors 4 --executor-cores 2 --class com.cloudera.sdk.SparkStreamExample2 sparkstreamexample2_2.11-1.0.jar localhost 41415
+
+
+Salida en consola:
+
+-------------------------------------------
+Time: 1526669035000 ms
+-------------------------------------------
+(again,16)
+(goodbye,16)
+(work,14)
+(does,14)
+(hello,46)
+(test,14)
+(world,32)
+(not,14)
+(it,14)
+
+-------------------------------------------
+Time: 1526669040000 ms
+-------------------------------------------
+(again,14)
+(goodbye,14)
+(work,16)
+(does,16)
+(hello,44)
+(test,16)
+(world,28)
+(not,16)
+(it,16)
+
+-------------------------------------------
+Time: 1526669045000 ms
+-------------------------------------------
+(again,15)
+(goodbye,15)
+(work,15)
+(does,15)
+(hello,45)
+(test,15)
+(world,30)
+(not,15)
+(it,15)
+
+
+Conteo de registros en hbase:
+
+
+hbase(main):001:0> count 'wordcount_landy'
+592 row(s) in 1.6300 seconds
+
+=> 592
+
